@@ -81,7 +81,7 @@ public class ProcesamientoFicheroXMLDOM extends ProcesamientoFichero{
 	}
 
 	@Override
-	public void guardarFichero(ArrayList<Libro> ArrayLibro) {
+	public void guardarFichero(ArrayList<Libro> arrayLibros) {
 		
 		try {
 			
@@ -91,7 +91,7 @@ public class ProcesamientoFicheroXMLDOM extends ProcesamientoFichero{
 		    //Elemento raíz
 		    Document doc = docBuilder.newDocument();
 		    Element librosElement = doc.createElement("libros");
-		    doc.appendChild(librosElement);
+		    doc.getDocumentElement().appendChild(librosElement);
 		    
 			//Elemento libro
 		    Element libro = doc.createElement("libro");
